@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Civran Marco IN0501392</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+<body>
+    <div class="header">
+        <h1>The Beatles</h1>
+            <a href="index.html"><h3>Home</h3></a>
+            <a href="calendar.html"><h3>Calendario</h3></a>
+            <a href="purchase.html"><h3>Acquisto</h3></a>
+    </div>
+
+    <div class="content">
+        <div style="width: 35%; height: 400px;float: left; padding: 5%;">
+            <form>
+                <h2>Prenotazioni</h2>
+                <label for="giorno">Selezionare il giorno del Concerto:</label>
+                    <select name="giorno" id="giorno">
+                        <option hidden>Scegli</option>
+                        <option value="25">25 Agosto 1966</option>
+                        <option value="28">28 Agosto 1966</option>
+                        <option value="29">29 Agosto 1966</option>
+                    </select>
+                    <br>
+                <label for="numero">Selezionare il numero di biglietti: </label>
+                    <input type="number" id="numero" name="numero" min="1" max="10" placeholder="1">
+                    <br><br>
+                <img src="images/ticket.png" style="width: 100px; float: left;"><button type="button" id="compra" style="float: left; margin-top: 25px;">1 Biglietto, $30</button>
+
+                 <script>
+                    const inputNumero = document.getElementById("numero");
+                    const bottone = document.getElementById("compra");
+
+                    inputNumero.addEventListener("input", function() {
+                    bottone.textContent = inputNumero.value + " Biglietto, $" + inputNumero.value*30;
+                    });
+                </script>
+            </form>
+           </div>
+        <div style="float: right; width: 35%; background-color: #f0f0f0; height: 400px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/IaoTheaterBoxOffice.JPG/960px-IaoTheaterBoxOffice.JPG" style="width: 100%;">
+        </div>
+    </div>
+
+</body>
+</html>
